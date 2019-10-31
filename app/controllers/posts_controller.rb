@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
  # before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :find_post, only: [:edit, :update]
-
+  
   def new
     @post = Post.new
   end
@@ -15,12 +15,12 @@ class PostsController < ApplicationController
     @posts = Post.all.reverse
   end
 
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
-    flash[:notice] = "The post has been deleted."
-  end
+  # def destroy
+  #   @post = Post.find(params[:id])
+  #   @post.destroy
+  #   redirect_to posts_path
+  #   flash[:notice] = "The post has been deleted."
+  # end
 
   def show
      @post = Post.find(params[:id])
@@ -42,9 +42,8 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:message)
   end
-
-  def find_post
+  
+   def find_post
    @post = Post.find(params[:id])
  end
-
 end
