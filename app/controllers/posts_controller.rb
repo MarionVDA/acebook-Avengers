@@ -1,5 +1,7 @@
-class PostsController < ApplicationController
- # before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
+# frozen_string_literal: true
+
+class PostsController < ApplicationController # rubocop:todo Style/Documentation
+  # before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
 
   def new
     @post = Post.new
@@ -11,7 +13,6 @@ class PostsController < ApplicationController
   end
 
   def index
-
     @posts = Post.all.reverse
   end
 
@@ -27,5 +28,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:message)
   end
-
 end
