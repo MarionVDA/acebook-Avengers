@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
- # before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
-  before_action :find_post, only: [:edit, :update]
+  # before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :find_post, only: %i[edit update]
 
   def new
     @post = Post.new
@@ -19,18 +21,18 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
-    flash[:notice] = "The post has been deleted."
+    flash[:notice] = 'The post has been deleted.'
   end
 
   def show
-     @post = Post.find(params[:id])
-	end
+    @post = Post.find(params[:id])
+  end
 
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-     flash[:notice] = "Post was updated"
-     redirect_to posts_path
+    flash[:notice] = 'The post has been updated'
+    redirect_to posts_path
   end
 
   def edit
@@ -44,7 +46,6 @@ class PostsController < ApplicationController
   end
 
   def find_post
-   @post = Post.find(params[:id])
- end
-
+    @post = Post.find(params[:id])
+  end
 end
