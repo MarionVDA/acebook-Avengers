@@ -1,0 +1,16 @@
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 160
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - 'spec/features/*.rb'
+    - 'config/environments/*.rb'
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
