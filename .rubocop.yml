@@ -1,0 +1,25 @@
+Metrics/LineLength:
+  Max: 180
+
+MixinUsage:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*.rb'
+    - 'spec/features/*.rb'
+    - 'db/schema.rb'
+
+
+UselessAssignment:
+  Exclude:
+    - 'spec/features/*.rb'
+
+IfUnlessModifier:
+    Exclude:
+      - 'spec/rails_helper.rb'
