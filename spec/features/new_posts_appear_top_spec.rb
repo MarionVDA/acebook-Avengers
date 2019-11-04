@@ -8,7 +8,7 @@ RSpec.feature "New posts", type: :feature do
     fill_in "Email", with: "jordan123@gmail.com"
     fill_in "Username", with: "jojo123"
     fill_in "Password", with: "123456", :match => :first
-    fill_in "Password confirmation", with: "123456", :match => :first
+    fill_in "Password confirmation", with: "123456"
     click_button "Sign up"
     click_link "New Post"
     fill_in "Message", with: "Hello, world!"
