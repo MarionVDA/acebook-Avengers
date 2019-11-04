@@ -6,7 +6,7 @@
 <table>
   <thead>
     <tr>
-      
+
       <th>Message</th>
       <th>Time since</th>
       <th colspan="3"></th>
@@ -19,7 +19,7 @@
 
         <td><%= simple_format(post.message) %></td>
         <td><%= time_ago_in_words(post.created_at) %>  ago</td>
-        <td><strong><%= link_to 'Comments', post %></strong></td>
+  
         <td><strong><%= link_to 'Edit', edit_post_path(post) %></strong></td>
         <td><strong><%= link_to 'Delete', post, method: :delete %></strong></td>
       </tr>

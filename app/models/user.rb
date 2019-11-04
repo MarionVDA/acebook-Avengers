@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :email, :email_format => {:message => 'is not looking good'}
 
+  validates :username,presence: true,
+                    format: { with: /\A(?=.*[a-z])[a-z\d]+\Z/i },
+                    uniqueness: { case_sensitive: false }
+
 end
