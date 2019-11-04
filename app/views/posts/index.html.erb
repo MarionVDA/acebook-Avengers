@@ -19,7 +19,15 @@
 
         <td><%= simple_format(post.message) %></td>
         <td><%= time_ago_in_words(post.created_at) %>  ago</td>
-  
+
+        <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+        <% if pre_like %>
+          <span class="unlike_btn"><%= button_to "&#128077;".html_safe, post_like_path(post, pre_like), method: :delete %> </span>
+        <% else %>
+        <span class="like_btn"><%= button_to "&#128078;".html_safe, post_likes_path(post), method: :post %> </span>
+        <% end %> </td>
+
+        <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
         <td><strong><%= link_to 'Edit', edit_post_path(post) %></strong></td>
         <td><strong><%= link_to 'Delete', post, method: :delete %></strong></td>
       </tr>
