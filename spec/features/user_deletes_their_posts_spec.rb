@@ -20,9 +20,9 @@ RSpec.feature "delete posts", type: :feature do
 
   scenario "User can not delete someone elses posts" do
 
-    user1 = User.create({email: "test123@gmail.com", password: "123456"})
+    user1 = User.create({email: "test123@gmail.com", username: "test1", password: "123456"})
     post1 = Post.create({message: "Hello", user_id: user1.id})
-    user2 = User.create({email: "test1234@gmail.com", password: "123456"})
+    user2 = User.create({email: "test1234@gmail.com", username: "test2", password: "123456"})
     visit "/"
     click_link "Login"
     fill_in "Email", with: "test1234@gmail.com"
