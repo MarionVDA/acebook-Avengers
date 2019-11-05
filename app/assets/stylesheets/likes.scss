@@ -1,0 +1,14 @@
+// Place all the styles related to the likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.unlike_btn input, .like_btn input {
+font-size: 20px;
+vertical-align: middle;
+border: 0px;
+}
+
+
+.unlike_btn input:focus, .like_btn input:focus {
+outline:0;
+}

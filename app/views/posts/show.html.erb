@@ -1,13 +1,13 @@
 
-<p>
  <strong>User:</strong>
- <p><%= User.find_by_id(@post.user_id).username %></p>
 
+ <p><%= User.find_by_id(@post.user_id).username %></p>
 
  <p>
   <strong>Message:</strong>
   <%= simple_format(@post.message) %>
 </p>
+
 <br>
 <p>
  <strong>Comments: <%= @post.comments.count %></strong>
@@ -20,4 +20,5 @@
   <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
+
 <%= link_to 'Back', posts_path %>

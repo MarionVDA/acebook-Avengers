@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require 'pry'
 
-RSpec.feature 'New posts', type: :feature do
-  scenario 'New Posts appear first' do
+RSpec.feature 'Edit', type: :feature do
+  scenario 'Can edit posts' do
     visit '/'
     click_link 'Sign up'
     fill_in 'Email', with: 'jordan123@gmail.com'
@@ -14,9 +15,9 @@ RSpec.feature 'New posts', type: :feature do
     click_link 'New Post'
     fill_in 'Message', with: 'Hello, world!'
     click_button 'Create Post'
-    click_link 'New Post'
-    fill_in 'Message', with: 'Bye, world!'
-    click_button 'Create Post'
-    expect('Bye, world!').to appear_before('Hello, world!')
+    click_link 'Edit'
+    fill_in 'Message', with: 'Edit, world!'
+    click_button 'Update Post'
+    expect(page).to have_content('Edit, world!')
   end
 end
