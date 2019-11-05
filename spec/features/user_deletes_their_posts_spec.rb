@@ -2,20 +2,20 @@
 
 require 'rails_helper'
 
-RSpec.feature "delete posts", type: :feature do
-  scenario "User can delete their own posts" do
-    visit "/"
-    click_link "Sign up"
-    fill_in "Email", with: "jordan123@gmail.com"
-    fill_in "Username", with: "jojo123"
-    fill_in "Password", with: "123456", :match => :first
-    fill_in "Password confirmation", with: "123456"
-    click_button "Sign up"
-    click_link "New Post"
-    fill_in "Message", with: "Hello, world!"
-    click_button "Create Post"
-    click_link "Delete"
-    expect(page).to have_content("Post was successfully deleted.")
+RSpec.feature 'delete posts', type: :feature do
+  scenario 'User can delete their own posts' do
+    visit '/'
+    click_link 'Sign up'
+    fill_in 'Email', with: 'jordan123@gmail.com'
+    fill_in 'Username', with: 'jojo123'
+    fill_in 'Password', with: '123456', match: :first
+    fill_in 'Password confirmation', with: '123456'
+    click_button 'Sign up'
+    click_link 'New Post'
+    fill_in 'Message', with: 'Hello, world!'
+    click_button 'Create Post'
+    click_link 'Delete'
+    expect(page).to have_content('Post was successfully deleted.')
   end
 
   scenario 'User can not delete someone elses posts' do
