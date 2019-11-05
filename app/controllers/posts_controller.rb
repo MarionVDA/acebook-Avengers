@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   def destroy
     if @post.user_id == current_user.id
       @post.destroy
-      flash[:notice] = 'Post was successfully destroyed.'
+      flash[:notice] = 'Post was successfully deleted.'
     else
       flash[:notice] = "You are not the owner of this post"
     end

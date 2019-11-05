@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   validates :email, :email_format => {:message => 'is not looking good'}
 
+  has_many :comments
+
 end

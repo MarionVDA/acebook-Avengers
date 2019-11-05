@@ -14,7 +14,7 @@ RSpec.feature "delete posts", type: :feature do
     fill_in "Message", with: "Hello, world!"
     click_button "Create Post"
     click_link "Delete"
-    expect(page).to have_content("Post was successfully destroyed.")
+    expect(page).to have_content("Post was successfully deleted.")
   end
 
 

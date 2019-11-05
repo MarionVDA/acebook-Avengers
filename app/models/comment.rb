@@ -1,6 +1,6 @@
-class Post < ApplicationRecord
-  default_scope {order(created_at: :desc)}
-  has_many :comments, dependent: :destroy
+class Comment < ApplicationRecord
+  belongs_to :post
+  belongs_to :user
   def editable?
    if (Time.now - self.created_at < 10.minutes)
      return "true"
