@@ -48,11 +48,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'commontator', '~> 4.11.1'
 gem 'devise'
 gem 'launchy'
 gem 'orderly'
 gem 'rails-helper', '~> 0.1.0'
-gem 'commontator', '~> 4.11.1'
 gem 'simple_form', '~> 3.5'
 gem 'validates_email_format_of'
-
