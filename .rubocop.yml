@@ -7,7 +7,8 @@ MixinUsage:
 Documentation:
   Enabled: false
 
-
+AbcSize:
+  Enabled: false  
 
 Metrics/BlockLength:
   Exclude:

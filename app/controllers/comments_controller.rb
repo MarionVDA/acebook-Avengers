@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   def create
-      @post = Post.find(params[:post_id])
-      @comment = @post.comments.create(params[:comment].permit(:message, :user_id, :username))
-      redirect_to post_path(@post)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(params[:comment].permit(:message, :user_id, :username))
+    redirect_to post_path(@post)
   end
 
   def destroy
@@ -12,11 +14,10 @@ class CommentsController < ApplicationController
       @comment.destroy
       flash[:notice] = 'Post was successfully deleted.'
     else
-      flash[:notice] = "You are not the owner of this comment"
+      flash[:notice] = 'You are not the owner of this comment'
     end
     redirect_to post_path(@post)
   end
-
 
   def edit
     @comment = Comment.find(params[:id])
@@ -27,9 +28,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.update(params[:comment].permit(:message, :user_id, :username))
-    flash[:notice] = "You updated your comment!"
+    flash[:notice] = 'You updated your comment!'
     redirect_to post_path(@post)
   end
-
-
 end
