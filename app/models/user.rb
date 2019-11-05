@@ -12,5 +12,8 @@ class User < ApplicationRecord
                        format: { with: /\A(?=.*[a-z])[a-z\d]+\Z/i },
                        uniqueness: { case_sensitive: false }
 
+  
+  has_many :comments
   has_many :likes, dependent: :destroy
+  
 end
