@@ -1,7 +1,8 @@
 
-<h1>Welcome to Acebook!</h1>
-
-<h2>Posts</h2>
+<div class="header">
+  <h1>Welcome to Acebook!</h1>
+  <p>Made by team Avengers</p>
+</div>
 
 <table>
   <thead>
@@ -16,6 +17,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
+    <h8> &nbsp; </h8>
       <tr>
         <td><%= User.find_by_id(post.user_id).username %></td>
         <td><%= simple_format(post.message) %></td>

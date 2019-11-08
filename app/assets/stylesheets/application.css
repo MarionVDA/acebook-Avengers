@@ -12,3 +12,293 @@
  // *
  // *= require_tree .
  // *= require_self
+
+
+ @charset 'UTF-8';
+
+ @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+
+ /*********************************************************************************/
+ /* Basic                                                                         */
+ /*********************************************************************************/
+ /* Style the body */
+ body {
+   font-family: Arial;
+   margin: 0;
+   background-image: url();
+ background-color: #cccccc;
+ }
+
+ /* Header/Logo Title */
+ .header {
+   padding: 30px;
+   text-align: center;
+   background: #e8f4f8;
+   color: white;
+   font-size: 20px;
+   text-shadow: 2px 2px 4px #000000;
+ }
+
+ /* Page Content */
+ .content {padding:20px;}
+ </style>
+ </head>
+ <body>
+ }
+
+ 	body
+ 	{
+ 		margin: 0;
+ 		padding: 0;
+ 		background: #161616;
+ 	}
+
+ 	body,input,textarea,select
+ 	{
+ 		font-family: 'Roboto', sans-serif;
+ 		font-size: 11pt;
+ 		font-weight: 300;
+ 		line-height: 1.75em;
+ 		color: #777;
+ 	}
+
+ 	h1,h2,h3,h4,h5,h6
+ 	{
+ 		font-weight: 300;
+ 		color: #777;
+ 	}
+
+ 		h2
+ 		{
+ 			letter-spacing: -0.025em;
+ 		}
+
+ 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+ 		{
+ 			color: inherit;
+ 			text-decoration: none;
+ 		}
+
+ 	strong, b
+ 	{
+ 		font-weight: 500;
+ 		color: #777;
+ 	}
+
+ 	em, i
+ 	{
+ 		font-style: italic;
+ 	}
+
+ 	a
+ 	{
+ 		text-decoration: none;
+ 		color: #777;
+ 	}
+
+ 	a:hover
+ 	{
+ 		text-decoration: underline;
+ 	}
+
+ 	sub
+ 	{
+ 		position: relative;
+ 		top: 0.5em;
+ 		font-size: 0.8em;
+ 	}
+
+ 	sup
+ 	{
+ 		position: relative;
+ 		top: -0.5em;
+ 		font-size: 0.8em;
+ 	}
+
+ 	hr
+ 	{
+ 		border: 0;
+ 		border-top: solid 1px #ddd;
+ 		margin: 6em 0 0 0;
+ 		padding: 6em 0 0 0;
+ 	}
+
+ 	blockquote
+ 	{
+ 		border-left: solid 0.5em #ddd;
+ 		padding: 1em 0 1em 2em;
+ 		font-style: italic;
+ 	}
+
+ 	p, ul, ol, dl, table
+ 	{
+ 		margin-bottom: 1em;
+ 	}
+
+ 	header
+ 	{
+ 		margin-bottom: 1.6em;
+ 	}
+
+ 		header h2
+ 		{
+ 		}
+
+ 		header .byline
+ 		{
+ 			display: block;
+ 			margin: 1.5em 0 0 0;
+ 			padding: 0 0 0.5em 0;
+ 		}
+
+ 	footer
+ 	{
+ 		margin-top: 1em;
+ 	}
+
+ 	br.clear
+ 	{
+ 		clear: both;
+ 	}
+
+ 	.pennant
+ 	{
+ 		color: #ff0800;
+ 	}
+
+ 	/* Sections/Articles */
+
+ 		section,
+ 		article
+ 		{
+ 			margin-bottom: 3em;
+ 		}
+
+ 		section > :last-child,
+ 		article > :last-child
+ 		{
+ 			margin-bottom: 0;
+ 		}
+
+ 		section:last-child,
+ 		article:last-child
+ 		{
+ 			margin-bottom: 0;
+ 		}
+
+ 		.row > section,
+ 		.row > article
+ 		{
+ 			margin-bottom: 0;
+ 		}
+
+ 	/* Images */
+
+ 		.image
+ 		{
+ 			display: inline-block;
+ 		}
+
+ 			.image img
+ 			{
+ 				display: block;
+ 				width: 100%;
+ 			}
+
+ 			.image.featured
+ 			{
+ 				display: block;
+ 				width: 100%;
+ 				margin: 0 0 2em 0;
+ 			}
+
+ 			.image.full
+ 			{
+ 				display: block;
+ 				width: 100%;
+ 				margin-bottom: 2em;
+ 			}
+
+ 			.image.left
+ 			{
+ 				float: left;
+ 				margin: 0 2em 2em 0;
+ 			}
+
+ 			.image.centered
+ 			{
+ 				display: block;
+ 				margin: 0 0 2em 0;
+ 			}
+
+ 				.image.centered img
+ 				{
+ 					margin: 0 auto;
+ 					width: auto;
+ 				}
+
+ 	/* Lists */
+
+ 		ul.default
+ 		{
+ 			margin: 0;
+ 			padding: 0em 0em 1.5em 0em;
+ 			list-style: none;
+ 		}
+
+ 			ul.default li
+ 			{
+ 				padding: 0.60em 0em;
+ 				font-size: 0.95em;
+ 				border-top: 1px solid;
+ 				border-color: rgba(0,0,0,.1);
+ 			}
+
+ 			ul.default li:first-child
+ 			{
+ 				padding-top: 0;
+ 				border-top: none;
+ 			}
+
+ 			ul.default {
+ 			}
+
+ 		ul.style li {
+ 			margin: 0;
+ 			padding: 2em 0em 1.5em 0em;
+ 			border-top: 1px solid;
+ 			border-color: rgba(0,0,0,.1);
+ 		}
+
+ 		ul.style li:first-child
+ 		{
+ 			padding-top: 0;
+ 			border-top: none;
+ 		}
+
+ 		ul.style img {
+ 			float: left;
+ 			margin-right: 20px;
+ 		}
+
+ 		ul.style a {
+ 			color: #ff0800;
+ 		}
+
+ 		ul.style .posted {
+ 			padding: 0em 0em 1em 0em;
+ 			letter-spacing: 1px;
+ 			text-transform: uppercase;
+ 			font-size: 8pt;
+ 			color: #ff0800;
+ 		}
+
+ 		ul.style .first {
+ 			padding-top: 0px;
+ 			border-top: none;
+ 		}
+
+    .Footer
+    <footer class="w3-container w3-theme-d3 w3-padding-16">
+      <h5>Footer</h5>
+    </footer>

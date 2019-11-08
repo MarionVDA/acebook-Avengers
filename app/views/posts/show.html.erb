@@ -1,25 +1,25 @@
-
-
- <strong>User:</strong>
-
+<div class="header">
+  <h1><strong>User</strong></h1>
  <p><%= User.find_by_id(@post.user_id).username %></p>
+</div>
+
 
  <p>
-  <strong>Message:</strong>
-  <%= simple_format(@post.message) %>
+  <center><strong>Message</strong></center>
+  <center><%= simple_format(@post.message) %></center>
 </p>
 
 <br>
 <p>
- <strong>Comments: <%= @post.comments.count %></strong>
+ <center><strong>Comments: <%= @post.comments.count %></strong></center>
 </p>
 <br>
 
-<p><%= render @post.comments %></p>
+<center><p><%= render @post.comments %></p></center>
 
-  <p> Add a Comment: </p>
-  <%= render 'comments/form' %>
+  <center><p> Add a Comment: </p></center>
+  <center><%= render 'comments/form' %></center>
 
-<%= link_to 'Edit', edit_post_path(@post) %>
+<center><%= link_to 'Edit', edit_post_path(@post) %></center>
 
-<%= link_to 'Back', posts_path %>
+<center><%= link_to 'Back', posts_path %></center>
