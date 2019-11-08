@@ -1,4 +1,17 @@
-# AceBook
+# AceBook Avengers
+
+Ruby on Rails Project:
+
+The core features of the project are:
+-Users
+-User Profile
+-Create, edit & delete posts
+-Like & unlike
+-Authentication and Authorization
+-Photo Albums
+-Users can upload photos to photo albums
+-Users cant delete/edit pictures, comments or posts that are not theirs
+
 
 REQUIRED INSTRUCTIONS:
 
@@ -7,26 +20,29 @@ the below**
 
 [You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
 
-2. The card wall is here: <please update>
+2. Run it
 
 ## How to contribute to this project
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Quickstart
 
-First, clone this repository. Then:
+1. Clone this repository to your local machine.
+git clone git@github.com: MarionVDA/acebook-Avengers.git
+2. Change into the odin-facebook directory
+cd acebook-Avengers
+3. Install the project dependencies using bundler.
+gem install bundler
+bundle install
+4. Create the database.
+rails db:create
+5. Run the database migrations.
+rails db:migrate
+6. Start the Rails server.
+7. run rails s in your terminal
 
-```bash
-> bundle install
-> bin/rails db:create
-> bin/rails db:migrate
+Otherwise navigate to https://arcane-mesa-59005.herokuapp.com/ to play around with the project.
 
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
-```
 
 Please see link below for goals
 https://trello.com/b/X9ZjxMCi/acebook
-
-
-As a team we all wanted to learn how to implement the devise gem which we are all struggling on & also learn how to implement Heroku. So far Flava is the only person in the team to have 1 commit
