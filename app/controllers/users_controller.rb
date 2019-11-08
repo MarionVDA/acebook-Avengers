@@ -19,10 +19,16 @@ class UsersController < ApplicationController
 
   end
 
+  def update
+    current_user.update_attributes(user_params)
+    flash[:notice] = 'Profile was successfully edited.'
+    redirect_to posts_path
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    params.require(:user).permit(:username, :email, :password,
                                  :password_confirmation)
   end
 
