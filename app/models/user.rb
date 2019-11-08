@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-    after_create :build_profile
+  after_create :build_profile
 
   validates :email, email_format: { message: 'is not looking good' }
 
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_one :profile
 
-def build_profile
-  Profile.create(user: self)
-end
+  def build_profile
+    Profile.create(user: self)
+  end
 end

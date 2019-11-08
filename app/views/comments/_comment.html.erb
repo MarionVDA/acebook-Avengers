@@ -1,5 +1,6 @@
-<strong><%= comment.username %> </strong> : <%= comment.message %>
-
+<div class="header">
+  <strong><%= comment.username %> </strong> : <%= comment.message %>
+</div>
 <br>
 <br>
 <i><%= time_ago_in_words(comment.created_at) %> ago</i>

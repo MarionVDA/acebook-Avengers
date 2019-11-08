@@ -1,14 +1,20 @@
 Metrics/LineLength:
   Max: 180
 
+Metrics/MethodLength:
+  Max: 20
+
 MixinUsage:
   Enabled: false
 
 Documentation:
   Enabled: false
 
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
 AbcSize:
-  Enabled: false  
+  Enabled: false
 
 Metrics/BlockLength:
   Exclude:
@@ -24,3 +30,6 @@ UselessAssignment:
 IfUnlessModifier:
     Exclude:
       - 'spec/rails_helper.rb'
+
+IdenticalConditionalBranche:
+    Enabled: false

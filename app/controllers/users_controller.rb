@@ -1,6 +1,6 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
-
-
   def show
     @user = User.find(params[:id])
     @wall = Wall.new(params[:id])
@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
   end
 
   def update
@@ -31,5 +30,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password,
                                  :password_confirmation)
   end
-
 end

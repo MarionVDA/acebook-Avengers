@@ -1,6 +1,11 @@
-<% provide(:title, @user.username) %>
+<div class="header">
+
+  <% provide(:title, @user.username) %>
 <h2 class="page-title">Welcome to <%= @user.username %>'s wall!</h2>
 <h3 class="page-subtitle">Newsfeed</h3>
+
+</div>
+
 <div class="post_form">
  <%= form_for :post, url: "/#{@user.id}" do |form| %>
    <%= form.label :message %>
@@ -16,12 +21,32 @@
 <% @wall.posts.each do |post| %>
   <div class="posts">
 
-    <% user = User.find(post.user_id).username %>
-    <p class="post_time"><%= post.updated_at.strftime('%I:%M %p, %A, %b %d') %></p>
-    <p class="user_name"><%= user %></p>
-    <p class="post_message"><%= post.message %></p>
-    <div class="post_link"><%= link_to 'Edit', edit_post_path(post) %></div>
-    <div class="post_link"><%= link_to 'Delete', post_path(post), method: :delete %></div>
-    <div class="post_link"><%= link_to 'Comments', post %></div>
-  </div>
+
+    <table>
+      <thead>
+        <tr>
+           <th>User</th>
+
+          <th>Message</th>
+          <th>Time since</th>
+          <th colspan="4"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <% user = User.find(post.user_id).username %>
+      <tr>
+        <td><p class="user_name"><%= user %></p></td>
+        <td><p class="post_message"><%= post.message %></p></td>
+        <td><p class="post_time"><%= post.updated_at.strftime('%I:%M %p, %A, %b %d') %></p></td>
+        <td><div class="post_link"><%= link_to 'Edit', edit_post_path(post) %></div></td>
+        <td><div class="post_link"><%= link_to 'Delete', post_path(post), method: :delete %></div></td>
+        <td><div class="post_link"><%= link_to 'Comments', post %></div></td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+
+
+</div>
 <% end %>
