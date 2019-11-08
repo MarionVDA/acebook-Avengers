@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+<<<<<<< HEAD
+=======
+# rubocop:todo Style/Documentation
+>>>>>>> jordan2
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -13,3 +17,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
 end
+# rubocop:enable Style/Documentation

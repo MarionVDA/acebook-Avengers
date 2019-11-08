@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-gem 'pry'
+gem 'rubocop'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
@@ -53,4 +54,5 @@ gem 'launchy'
 gem 'orderly'
 gem 'rails-helper', '~> 0.1.0'
 gem 'simple_form', '~> 3.5'
+gem 'pry'
 gem 'validates_email_format_of'

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
+<<<<<<< HEAD
 Rails.application.configure do
+=======
+Rails.application.configure do # rubocop:todo Metrics/BlockLength
+>>>>>>> jordan2
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
