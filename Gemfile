@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -48,9 +48,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'devise'
+gem 'devise', '~> 4.5.0'
 gem 'launchy'
 gem 'orderly'
 gem 'rails-helper', '~> 0.1.0'
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 4.0.1'
 gem 'validates_email_format_of'

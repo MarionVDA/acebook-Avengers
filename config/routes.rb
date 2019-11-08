@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :likes
   end
 
+  resources :albums do
+   resources :photos
+  end
+
   resources :users
 
   get '/:id', to: 'users#show'
