@@ -1,0 +1,12 @@
+
+
+  <strong>Profile</strong>
+
+  <p><%= User.find_by_id(@profile.user_id).username %></p>
+  <p><%= User.find_by_id(@profile.user_id).email %></p>
+
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %>
+
+<%= link_to 'Back', posts_path %>

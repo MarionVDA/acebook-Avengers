@@ -12,11 +12,15 @@ Rails.application.routes.draw do
     resources :likes
   end
 
+
   resources :albums do
    resources :photos
   end
 
-  resources :users
+   resources :users do
+    resource :profile
+  end
+ 
 
   get '/:id', to: 'users#show'
   post '/:id', to: 'posts#create'
