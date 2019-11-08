@@ -20,7 +20,7 @@ Rails.application.routes.draw do
    resources :users do
     resource :profile
   end
- 
+
 
   get '/:id', to: 'users#show'
   post '/:id', to: 'posts#create'
