@@ -17,10 +17,9 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= User.find_by_id(post.user_id).username %></td>
+        <td><%= User.find(post.user_id).username %></td>
         <td><%= simple_format(post.message) %></td>
         <td><%= time_ago_in_words(post.created_at) %>  ago</td>
-
 
         <td><% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
         <% if pre_like %>
@@ -39,5 +38,4 @@
 </table>
 
 <br>
-
 <%= link_to 'New Post', new_post_path %>
