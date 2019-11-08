@@ -18,6 +18,7 @@ class User < ApplicationRecord # rubocop:todo Style/Documentation
                        uniqueness: { case_sensitive: false }
 
   has_many :comments
+  has_many :posts
   has_many :likes, dependent: :destroy
 =======
 >>>>>>> jordan2
