@@ -1,0 +1,13 @@
+
+<p>
+  <strong>Album:</strong>
+  <%= @album.name %>
+</p>
+
+ <strong> Photos: <%= @album.photos.count %></strong>
+ <br>
+
+ <p><%= render @album.photos %></p>
+
+<%= link_to 'Add Photo', "/albums/#{@album.id}/photos/new" %>
+|<%= link_to 'Back', albums_url %>

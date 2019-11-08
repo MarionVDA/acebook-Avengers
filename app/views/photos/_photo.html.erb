@@ -1,0 +1,11 @@
+
+<div style = "width:600px; height:auto">
+<%= image_tag(photo.image, style:"width:100%") %>
+</div>
+<p><%= photo.caption %> </p>
+<br>
+<i><%= time_ago_in_words(photo.created_at) %> ago</i>
+<p id= "modify"><%= link_to 'Edit', edit_album_photo_path(@album, photo) %> |
+<%= link_to 'Delete',[photo.album,photo], method: :delete, data: { confirm: 'Are you sure?'} %><p>
+<br>
+<br>
