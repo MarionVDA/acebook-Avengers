@@ -22,7 +22,7 @@ RSpec.feature 'Edit', type: :feature do
   end
 
   scenario 'Can not edit posts after 10mins' do
-    @fake_time =  Time.now + (11*60)
+    @fake_time = Time.now + (11 * 60)
     visit '/'
     click_link 'Sign up'
     fill_in 'Email', with: 'jordan123@gmail.com'
