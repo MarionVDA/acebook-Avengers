@@ -12,5 +12,10 @@ Rails.application.routes.draw do
     resources :likes
   end
 
+  resources :users
+
+  get '/:id', to: 'users#show'
+  post '/:id', to: 'posts#create'
+
   root 'posts#index'
 end

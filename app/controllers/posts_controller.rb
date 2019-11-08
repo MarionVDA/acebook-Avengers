@@ -14,10 +14,10 @@ class PostsController < ApplicationController
   def edit
     if @post.user_id != current_user.id
       flash[:notice] = 'You are not the owner of this post'
-      redirect_to posts_path
+      redirect_to request.referrer
     elsif @post.editable? == 'false'
       flash[:notice] = 'Post can only be updated within 10 minutes'
-      redirect_to posts_path
+      redirect_to request.referrer
     end
   end
 
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     else
       flash[:notice] = 'You are not the owner of this post'
     end
-    redirect_to posts_url
+    redirect_to request.referrer
   end
 
   def destroy
@@ -43,8 +43,7 @@ class PostsController < ApplicationController
     else
       flash[:notice] = 'You are not the owner of this post'
     end
-
-    redirect_to posts_url
+    redirect_to request.referrer
   end
 
   private
@@ -54,6 +53,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:message, :user_id)
+    params.require(:post).permit(:message, :user_id, :wall_id)
   end
 end
